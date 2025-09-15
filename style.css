@@ -215,3 +215,114 @@ a:focus, button:focus { outline: 3px solid rgba(255,215,0,0.18); outline-offset:
   .card-excerpt{ font-size:0.95rem; }
   .hero-sub{ font-size:0.98rem; }
 }
+
+/* Link Styling */
+a {
+  color: #FFD700;          /* kuning default */
+  text-decoration: none;   /* hilangkan garis bawah */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;          /* saat hover jadi putih */
+}
+
+a:visited {
+  color: #FFD700;          /* tetap kuning meski sudah dikunjungi */
+}
+
+/* Styling khusus untuk tombol-link (kembali, selengkapnya) */
+.btn-link {
+  color: #ffffff;          /* putih */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #FFD700;          /* pas hover jadi kuning */
+}
+
+/* Styling khusus untuk link Baca Selengkapnya */
+.read-more {
+  color: #ffffff;          /* putih */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #FFD700;          /* saat hover jadi kuning */
+}
+
+/* Styling khusus untuk link Baca Selengkapnya */
+a.read-more {
+  color: #ffffff !important;   /* paksa jadi putih */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a.read-more:hover {
+  color: #FFD700 !important;   /* hover jadi kuning */
+}
+
+body {
+  background-color: #000000;
+  color: #FFD700;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card artikel */
+.article-card {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.article-title {
+  color: #FFD700;
+  margin-top: 0;        /* hapus margin atas default */
+  margin-bottom: 10px;  /* jarak ke cuplikan artikel */
+}
+
+.article-snippet {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  color: #FFD700;
+}
+
+/* Tanggal kecil di index */
+.upload-date-small {
+  color: #ffffff;       /* putih */
+  font-size: 0.75rem;   /* kecil */
+  margin-bottom: 2px;   /* lebih kecil, jarak lebih dekat ke judul */
+}
+
+/* Reset margin heading */
+.article-card h2,
+.article-card h1 {
+  margin-top: 0;       /* hilangkan jarak atas heading */
+  margin-bottom: 10px; /* jarak ke konten bawah */
+}
+
+/* Tanggal kecil di index */
+.upload-date-small {
+  color: #ffffff;
+  font-size: 0.75rem;
+  margin-bottom: 0;   /* hapus jarak bawah */
+  display: block;     /* pastikan baris sendiri */
+}
