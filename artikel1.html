@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mengenal Diri di Cermin Waktu</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mengenal Diri di Cermin Waktu — Teras Makna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Teras Makna</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="Teras Makna Home">
+          <h1>Teras Makna</h1>
+          <p class="tag">Merangkai makna, menyentuh hati</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="mailto:anamingrzx@gmail.com">Email</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
   </header>
 
-  <main>
-    <h2>Mengenal Diri di Cermin Waktu</h2>
-    <p>
-      Ada masa ketika kita berdiri di hadapan cermin, bukan untuk melihat wajah, 
-      tapi untuk menatap kembali jejak yang telah dilalui. Waktu mengajarkan kita 
-      bahwa setiap luka, setiap tawa, adalah guratan yang membentuk siapa kita hari ini.
-    </p>
-    <a href="index.html">← Kembali</a>
+  <main class="container" style="padding:40px 20px;">
+    <article class="post-card" style="max-width:900px; margin:auto;">
+      <h2 style="font-family:'Playfair Display', serif; color:var(--accent); margin-bottom:8px;">Mengenal Diri di Cermin Waktu</h2>
+      <p style="color:#cfcfcf; margin-bottom:18px;">Oleh Arif Budiman • 2025</p>
+
+      <section style="color:#ddd; font-size:1.05rem; line-height:1.9;">
+        <p>Ada masa ketika kita berdiri di hadapan cermin, bukan untuk melihat rupa, tetapi untuk menelisik bekas langkah. Waktu seperti pena halus yang menulis cerita kecil di punggung kita — bekas tawa, retakan luka, dan goresan harap yang tak selalu tampak pada permukaan.</p>
+
+        <p>Menulis adalah cara menata kembali serpihan itu. Dengan kata, kita memberi nama pada rindu; dengan kalimat, kita merapikan benang-benang yang semula kusut. Sebuah cermin tak hanya merefleksikan wujud, ia memanggil ingatan akan siapa yang pernah kita jadi.</p>
+
+        <p>Ketika malam turun, dan senja menutup mata kota, aku menulis bukan karena ingin bicara, melainkan karena ingin mendengar. Siapa aku pada baris-baris pertama, dan siapa aku pada baris-baris yang tersisa—itu yang perlahan terbaca.</p>
+
+        <p>—</p>
+
+        <p style="color:#bbb;">Kalau kamu suka tulisan ini, kamu bisa hubungi penulis: <a href="mailto:anamingrzx@gmail.com" style="color:var(--accent); text-decoration:none;">anamingrzx@gmail.com</a></p>
+      </section>
+
+      <p style="margin-top:22px;"><a class="read-more" href="index.html">← Kembali ke Beranda</a></p>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Teras Makna — Arif Budiman</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
 </body>
 </html>

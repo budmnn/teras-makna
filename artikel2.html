@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senja yang Tak Pernah Sama</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Senja yang Tak Pernah Sama — Teras Makna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Teras Makna</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="Teras Makna Home">
+          <h1>Teras Makna</h1>
+          <p class="tag">Merangkai makna, menyentuh hati</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="mailto:anamingrzx@gmail.com">Email</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
   </header>
 
-  <main>
-    <h2>Senja yang Tak Pernah Sama</h2>
-    <p>
-      Setiap senja membawa cerita yang berbeda. Meski warnanya serupa, 
-      namun rasa di hati manusia tak pernah sama. Senja mengingatkan kita, 
-      bahwa perpisahan pun bisa indah, bila kita belajar menerima.
-    </p>
-    <a href="index.html">← Kembali</a>
+  <main class="container" style="padding:40px 20px;">
+    <article class="post-card" style="max-width:900px; margin:auto;">
+      <h2 style="font-family:'Playfair Display', serif; color:var(--accent); margin-bottom:8px;">Senja yang Tak Pernah Sama</h2>
+      <p style="color:#cfcfcf; margin-bottom:18px;">Oleh Arif Budiman • 2025</p>
+
+      <section style="color:#ddd; font-size:1.05rem; line-height:1.9;">
+        <p>Setiap senja membawa cerita. Ada yang tenang, ada yang bergemuruh. Ada pula senja yang hanya menunggu, menanti orang pulang yang tak kunjung tiba. Senja memeluk kita tanpa bertanya, mengembalikan warna yang sempat hilang pada hari-hari yang berat.</p>
+
+        <p>Ketika langit memerah, aku belajar bahwa perpisahan tak selalu menyakitkan. Ada yang lembut seperti bisikan, yang mengajari kita melepas tanpa kehilangan seluruh diri. Senja mengajarkan tentang berat dan ringan, tentang bagaimana kita memilih tetap kembali ke rumah batin sendiri.</p>
+
+        <p>Dan di tiap akhir, ada harapan kecil yang tumbuh — seperti lentera di tepian pelabuhan yang selalu menunggu kapal pulang.</p>
+
+        <p style="color:#bbb;">Jika ingin berdiskusi atau memberi masukan, kirim pesan ke <a href="mailto:anamingrzx@gmail.com" style="color:var(--accent); text-decoration:none;">anamingrzx@gmail.com</a></p>
+      </section>
+
+      <p style="margin-top:22px;"><a class="read-more" href="index.html">← Kembali ke Beranda</a></p>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Teras Makna — Arif Budiman</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
 </body>
 </html>

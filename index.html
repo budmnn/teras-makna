@@ -1,50 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teras Makna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teras Makna — Kumpulan Tulisan</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="Teras Makna — kumpulan tulisan reflektif dan hikmah." />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Teras Makna</h1>
-    <nav>
-      <a href="#">Beranda</a>
-      <a href="#">Artikel</a>
-      <a href="#">Tentang</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="Teras Makna Home">
+          <h1>Teras Makna</h1>
+          <p class="tag">Merangkai makna, menyentuh hati</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Merangkai Makna, Menyentuh Hati</h2>
-    <p>Kumpulan refleksi, kata, dan hikmah dari perjalanan hidup.</p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero-title">Di sini kata bertemu sunyi — lalu menjadi makna.</h2>
+        <p class="hero-sub">Kumpulan tulisan reflektif — catatan kecil tentang waktu, rindu, dan pembelajaran.</p>
+      </div>
+    </section>
 
-  <!-- ARTICLES -->
-  <section class="articles">
-    <div class="card">
-      <h3>Artikel 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Menyentuh rasa dan makna.</p>
-    </div>
-    <div class="card">
-      <h3>Artikel 2</h3>
-      <p>Refleksi sederhana, tapi membawa hikmah besar bagi kehidupan.</p>
-    </div>
-    <div class="card">
-      <h3>Artikel 3</h3>
-      <p>Setiap kata adalah cermin dari jiwa yang menuliskannya.</p>
-    </div>
-  </section>
+    <!-- ARTICLES -->
+    <section class="container articles-section" aria-labelledby="list-title">
+      <h3 id="list-title" class="section-title">Tulisan Terbaru</h3>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Teras Makna | Dibuat dengan hati
+      <div class="articles-grid">
+        <article class="card">
+          <div class="card-content">
+            <h4 class="card-title"><a href="artikel1.html">Mengenal Diri di Cermin Waktu</a></h4>
+            <p class="card-excerpt">Ada masa ketika kita berdiri di hadapan cermin bukan untuk melihat rupa, tapi menelusuri bekas langkah…</p>
+            <a class="read-more" href="artikel1.html">Baca selengkapnya →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h4 class="card-title"><a href="artikel2.html">Senja yang Tak Pernah Sama</a></h4>
+            <p class="card-excerpt">Setiap senja menyimpan nama-nama yang tak kita kenal, sekaligus mengingatkan kita pada yang hilang.</p>
+            <a class="read-more" href="artikel2.html">Baca selengkapnya →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBE / CONTACT MINI -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Teras Makna — Dibuat oleh Arif Budiman</p>
+    </div>
   </footer>
 
+  <script>
+    // small script: toggle nav for mobile
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('nav-open');
+      });
+    })();
+  </script>
 </body>
 </html>

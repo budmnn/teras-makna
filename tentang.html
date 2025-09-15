@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang — Teras Makna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" aria-label="Teras Makna Home">
+          <h1>Teras Makna</h1>
+          <p class="tag">Merangkai makna, menyentuh hati</p>
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding:40px 20px;">
+    <article style="max-width:900px; margin:auto; color:#ddd;">
+      <h2 style="font-family:'Playfair Display', serif; color:var(--accent);">Tentang Penulis</h2>
+      <p style="margin-top:8px; color:#cfcfcf;">
+        Halo — aku Arif Budiman. Teras Makna adalah ruang kecil tempatku menulis tentang waktu, rindu, dan hikmah yang kutemui di jalan. Tulisan-tulisan ini lahir dari catatan harian dan renungan, bukan dari kebenaran mutlak, melainkan dari upaya memahami diri sendiri.
+      </p>
+
+      <h3 style="margin-top:18px; color:var(--accent);">Kontak & Sosial</h3>
+      <p style="color:#cfcfcf;">
+        Email: <a href="mailto:anamingrzx321@gmail.com" style="color:var(--accent); text-decoration:none;">anamingrzx321@gmail.com</a><br>
+        Instagram: <a href="https://www.instagram.com/budmnn_/">@budmnn_</a><br>
+      </p>
+
+      <h3 style="margin-top:18px; color:var(--accent);">Cara Menulis Artikel Baru</h3>
+      <p style="color:#cfcfcf;">
+        Buat file baru `artikelX.html` (mis. artikel3.html), isi konten seperti contoh di artikel1.html, lalu tambahkan card/link di index.html. Jika mau, aku yang bantu tambah artikelnya.
+      </p>
+
+      <p style="margin-top:18px;"><a class="read-more" href="index.html">← Kembali ke Beranda</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Teras Makna — Arif Budiman</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    })();
+  </script>
+</body>
+</html>
