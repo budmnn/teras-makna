@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  // ===== LOGIKA UNTUK NAVBAR MOBILE =====
+  try {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.navbar nav');
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', function () {
+        // Alihkan (toggle) kelas untuk menampilkan/menyembunyikan menu
+        navMenu.classList.toggle('nav-open');
+        
+        // Alihkan (toggle) kelas untuk animasi tombol hamburger
+        this.classList.toggle('active');
+      });
+    }
+  } catch (err) {
+    console.error('Error pada fungsionalitas Navbar mobile:', err);
+  }
+
   // ===== Tanggal otomatis di halaman artikel =====
   try {
     const dateEl = document.getElementById('autoDate');
@@ -14,31 +33,24 @@ document.addEventListener('DOMContentLoaded', function () {
   // ===== Search filter di index (dengan pesan "Hasil tidak ditemukan") =====
   try {
     const searchInput = document.getElementById('searchInput');
-    const noResult = document.getElementById('noResult'); // elemen pesan, boleh null
+    const noResult = document.getElementById('noResult');
 
     if (searchInput) {
-      // ambil semua card artikel (NodeList, mungkin kosong)
       const articles = Array.from(document.querySelectorAll('.article-card'));
-
-      // sembunyikan pesan awalnya
       if (noResult) noResult.style.display = 'none';
 
-      // pakai event 'input' supaya reaktif untuk copy/paste juga
       searchInput.addEventListener('input', function () {
         const filter = this.value.trim().toLowerCase();
         let found = false;
 
         articles.forEach(article => {
-          // ambil title & snippet bila ada, fallback ke string kosong
           const titleEl = article.querySelector('.article-title');
           const snippetEl = article.querySelector('.article-snippet');
 
           const title = titleEl ? titleEl.textContent.toLowerCase() : '';
           const snippet = snippetEl ? snippetEl.textContent.toLowerCase() : '';
 
-          // jika kosong (filter ''), tampilkan semua
           const match = (filter === '') || title.includes(filter) || snippet.includes(filter);
-
           article.style.display = match ? '' : 'none';
           if (match) found = true;
         });
