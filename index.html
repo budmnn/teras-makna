@@ -1,91 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teras Makna — Kumpulan Tulisan</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teras Makna</title>
   <link rel="stylesheet" href="style.css">
-
-  <meta name="description" content="Teras Makna — kumpulan tulisan reflektif dan hikmah." />
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <a href="index.html" aria-label="Teras Makna Home">
-          <h1>Teras Makna</h1>
-          <p class="tag">Merangkai makna, menyentuh hati</p>
-        </a>
-      </div>
-
-      <nav class="nav">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-      </nav>
-
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    </div>
+  <!-- Navbar -->
+    <header class="navbar">
+    <div class="logo">Teras Makna</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <h2 class="hero-title">Di sini kata bertemu sunyi — lalu menjadi makna.</h2>
-        <p class="hero-sub">Kumpulan tulisan reflektif — catatan kecil tentang waktu, rindu, dan pembelajaran.</p>
-      </div>
-    </section>
+  
+  <!-- Hero Section -->
+<section class="hero">
+  <h1>Selamat Datang di Teras Makna</h1>
+  <p>Ruang refleksi, kata, dan makna. Tempat di mana tulisan bertemu dengan jiwa.</p>
+</section>
 
-    <!-- ARTICLES -->
-    <section class="container articles-section" aria-labelledby="list-title">
-      <h3 id="list-title" class="section-title">Tulisan Terbaru</h3>
 
-      <div class="articles-grid">
-        <article class="card">
-          <div class="article-card">
-            <p class="upload-date-small">Diunggah: 16 September 2025</p>
-            <h2 class="article-title">Judul Artikel 1</h2>
-            <p class="article-snippet">Cuplikan artikel...</p>
-            <a class="read-more" href="artikel1.html">Baca Selengkapnya →</a>
-          </div>
-
-        </article>
-
-        <article class="card">
-          <div class="article-card">
-            <p class="upload-date-small">Diunggah: 16 September 2025</p>
-            <h2 class="article-title">Judul Artikel 1</h2>
-            <p class="article-snippet">Cuplikan artikel...</p>
-            <a class="read-more" href="artikel2.html">Baca Selengkapnya →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SUBSCRIBE / CONTACT MINI -->
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 Teras Makna — Dibuat oleh Arif Budiman</p>
+  <main class="container">
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari artikel...">
     </div>
-  </footer>
 
-  <script>
-    // small script: toggle nav for mobile
-    (function(){
-      const btn = document.querySelector('.nav-toggle');
-      const nav = document.querySelector('.nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('nav-open');
-      });
-    })();
-  </script>
+    <!-- Artikel Cards -->
+    <div id="articles">
+      <div class="article-card">
+        <p class="upload-date-small">Diunggah: 15 September 2025</p>
+        <h2 class="article-title">Suara di Lautan Kosmik</h2>
+        <p class="article-snippet">Suara ini, aku tahu. Aku pernah mendengarnya di seberang lautan kosmik, saat malam menipiskan jarak antara rindu dan doa.</p>
+        <a class="read-more" href="artikel1.html">Baca Selengkapnya →</a>
+      </div>
+
+      <div class="article-card">
+        <p class="upload-date-small">Diunggah: 16 September 2025</p>
+        <h2 class="article-title">Judul Artikel 2</h2>
+        <p class="article-snippet">Cuplikan artikel kedua...</p>
+        <a class="read-more" href="artikel2.html">Baca Selengkapnya →</a>
+      </div>
+    </div>
+
+      <!-- Pesan jika tidak ada hasil -->
+  <p id="noResult" style="display:none; color:#FFD700; font-weight:600; margin-top:20px;">
+    Hasil tidak ditemukan.
+  </p>
+  
+    <!-- Footer -->
+<footer>
+  <p>© 2025 Teras Makna | Budiman</p>
+  <div class="socials">
+  </div>
+</footer>
+  </main>
 </body>
 </html>

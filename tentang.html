@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tentang — Teras Makna</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teras Makna</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <a href="index.html" aria-label="Teras Makna Home">
-          <h1>Teras Makna</h1>
-          <p class="tag">Merangkai makna, menyentuh hati</p>
-        </a>
-      </div>
-
-      <nav class="nav">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-      </nav>
-
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    </div>
+  
+  <!-- Header / Navbar (sama dengan beranda) -->
+  <header class="navbar">
+    <div class="logo">Teras Makna</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
   </header>
 
-  <main class="container" style="padding:40px 20px;">
-    <article style="max-width:900px; margin:auto; color:#ddd;">
-      <h2 style="font-family:'Playfair Display', serif; color:var(--accent);">Tentang Penulis</h2>
-      <p style="margin-top:8px; color:#cfcfcf;">
-        Seorang anak kelahiran Lubuk Alung berdarah Minangkabau, menempuh pendidikan sebagai mahasiswa Fakultas Syariah dan Hukum UIN Sunan Kalijaga.
-      </p>
+  <!-- HERO untuk halaman tentang (gelap seperti beranda) -->
+  <section class="hero">
+    <div class="container">
+      <h1>Tentang Teras Makna</h1>
+      <p>Ruang kecil untuk menulis, merenung, dan merangkai kata yang memberi makna.</p>
+    </div>
+  </section>
 
-      <h3 style="margin-top:18px; color:var(--accent);">Kontak & Sosial</h3>
-      <p style="color:#cfcfcf;">
-        Email: <a href="mailto:anamingrzx321@gmail.com" style="color:var(--accent); text-decoration:none;">anamingrzx321@gmail.com</a><br>
-        Instagram: <a href="https://www.instagram.com/budmnn_/">@budmnn_</a><br>
-      </p>
-      
-      <p style="margin-top:18px;"><a class="read-more" href="index.html">← Kembali ke Beranda</a></p>
-    </article>
+  <!-- Konten utama halaman tentang (background putih, teks kontras) -->
+  <main class="about">
+    <div class="container">
+        <h2 class="article-title ">Tentang Penulis</h2>
+        <p>Halo — aku Arif Budiman, anak kelahiran Lubuk Alung, Minangkabau. Saat ini menempuh studi di Fakultas Syariah & Hukum UIN Sunan Kalijaga. Teras Makna adalah ruang kecil tempatku menulis tentang waktu, rindu, dan hikmah yang kutemui di jalan. Tulisan ini lahir dari catatan harian dan renungan—bukan klaim kebenaran mutlak, melainkan usaha memahami diri.</p>
+
+        <h2 class="article-title">Kontak & Sosial</h2>
+        <p class="contact">
+          Email: <a href="mailto:anamingrzx@gmail.com" target="_blank" rel="noopener">anamingrzx@gmail.com</a><br>
+          Instagram: <a href="https://instagram.com/budmnn_" target="_blank" rel="noopener">@budmnn_</a>
+        </p>
+
+        <a class="read-more" href="index.html">← Kembali ke Beranda</a>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 Teras Makna — Arif Budiman</p>
-    </div>
-  </footer>
-
+ <footer>
+  <p>© 2025 Teras Makna | Budiman</p>
+  <div class="socials">
+  </div>
+</footer>
   <script>
     (function(){
       const btn = document.querySelector('.nav-toggle');
       const nav = document.querySelector('.nav');
-      btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
+      if(btn) btn.addEventListener('click', () => nav.classList.toggle('nav-open'));
     })();
   </script>
 </body>
