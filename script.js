@@ -18,18 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Error pada fungsionalitas Navbar mobile:', err);
   }
 
-  // ===== Tanggal otomatis di halaman artikel =====
-  try {
-    const dateEl = document.getElementById('autoDate');
-    if (dateEl) {
-      const today = new Date();
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      dateEl.textContent = 'Diunggah: ' + today.toLocaleDateString('id-ID', options);
-    }
-  } catch (err) {
-    console.error('Error saat men-set tanggal:', err);
-  }
-
   // ===== Search filter di index (dengan pesan "Hasil tidak ditemukan") =====
   try {
     const searchInput = document.getElementById('searchInput');

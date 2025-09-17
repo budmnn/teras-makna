@@ -362,17 +362,16 @@ footer {
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
     z-index: 999; /* Pastikan menu di atas overlay */
   }
-  
+
   .navbar nav.nav-open {
     right: 0;
   }
-  
+
   .navbar nav a { font-size: 1.5rem; }
-  
+
   .nav-toggle {
     display: block;
     z-index: 1002;
-    /* PERBAIKAN: Hapus background putih */
     background: none;
     border: none;
     padding: 0;
@@ -391,19 +390,23 @@ footer {
   .hero h1 { font-size: 2.5rem; }
   .article-page .article-title, .about .article-title { font-size: 2rem; }
   .light-theme main .container { padding: 25px; margin-top: 25px;}
-}
+} /* <-- Akhir dari Media Query. Kode baru diletakkan SETELAH ini. */
 
-/* --- Tambahkan kode ini untuk halaman Beranda (dark-theme) --- */
+/* =======================================
+   PENAMBAHAN & PERBAIKAN CUSTOM
+   ======================================= */
+
+/* Wadah konten di halaman Beranda (dark-theme) */
 .dark-theme main.container {
-  background-color: var(--card-bg-dark); /* Menggunakan warna background kartu */
+  background-color: var(--card-bg-dark);
   padding: 40px;
   border-radius: 12px;
   margin-top: 40px;
   margin-bottom: 40px;
-  border: 1px solid var(--border-color-dark); /* Menambahkan border tipis */
+  border: 1px solid var(--border-color-dark);
 }
 
-/* Style untuk wadah konten di halaman Tentang saat mode gelap */
+/* Wadah konten di halaman Tentang (dark-theme) */
 .dark-theme .about {
   background-color: var(--card-bg-dark);
   padding: 40px;
@@ -413,12 +416,51 @@ footer {
   margin-bottom: 40px;
 }
 
-/* Membuat link kontak menjadi kuning di mode gelap */
+/* Link kontak menjadi kuning (dark-theme) */
 .dark-theme .about .contact a {
   color: var(--accent-gold);
-  text-decoration: none; /* Opsional: menghilangkan garis bawah default */
+  text-decoration: none;
+}
+.dark-theme .about .contact a:hover {
+  text-decoration: underline;
 }
 
-.dark-theme .about .contact a:hover {
-  text-decoration: underline; /* Opsional: memberi garis bawah saat disentuh kursor */
+/* Label kategori di kartu artikel */
+.article-category {
+  color: var(--accent-gold);
+  background-color: rgba(255, 215, 0, 0.1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Link pembungkus kartu artikel */
+.article-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.article-card-link:hover .article-card {
+  transform: translateY(-8px);
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+/* Jarak atas untuk link 'Kembali' di halaman artikel */
+.article-page > .read-more {
+  margin-top: 30px; /* Saya ubah nilainya agar lebih terasa perubahannya */
+}
+
+/*
+ * PERBAIKAN: Mengatur jarak antara paragraf terakhir dan link "Kembali".
+ * Ini akan menargetkan paragraf terakhir di dalam halaman artikel
+ * dan menghapus jarak bawahnya agar tidak menumpuk.
+*/
+.article-page p:last-of-type {
+  margin-bottom: 0;
 }
