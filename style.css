@@ -392,3 +392,33 @@ footer {
   .article-page .article-title, .about .article-title { font-size: 2rem; }
   .light-theme main .container { padding: 25px; margin-top: 25px;}
 }
+
+/* --- Tambahkan kode ini untuk halaman Beranda (dark-theme) --- */
+.dark-theme main.container {
+  background-color: var(--card-bg-dark); /* Menggunakan warna background kartu */
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid var(--border-color-dark); /* Menambahkan border tipis */
+}
+
+/* Style untuk wadah konten di halaman Tentang saat mode gelap */
+.dark-theme .about {
+  background-color: var(--card-bg-dark);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color-dark);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Membuat link kontak menjadi kuning di mode gelap */
+.dark-theme .about .contact a {
+  color: var(--accent-gold);
+  text-decoration: none; /* Opsional: menghilangkan garis bawah default */
+}
+
+.dark-theme .about .contact a:hover {
+  text-decoration: underline; /* Opsional: memberi garis bawah saat disentuh kursor */
+}
