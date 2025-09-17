@@ -10,50 +10,48 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="light-theme">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Teras Makna</div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Buka menu navigasi">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
 
-  <!-- Header / Navbar (sama dengan beranda) -->
- <header class="navbar">
-  <div class="logo">Teras Makna</div>
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="tentang.html">Tentang</a>
-  </nav>
-  <button class="nav-toggle" aria-label="Buka menu navigasi">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-</header>
+    <!-- KONTEN UTAMA HALAMAN TENTANG (semua digabung di sini) -->
+    <main>
+        <!-- Bagian Hero digabung ke sini -->
+        <section class="hero">
+            <div class="container">
+                <h1>Tentang Teras Makna</h1>
+                <p>Teras Makna adalah ruang kecil tempatku menulis tentang waktu, rindu, dan hikmah yang kutemui di jalan...</p>
+            </div>
+        </section>
+        
+        <!-- Bagian Konten Tentang digabung ke sini -->
+        <div class="container about">
+            <h2 class="article-title">Tentang Penulis</h2>
+            <p>Arif Budiman, anak kelahiran Lubuk Alung, Minangkabau...</p>
 
-  <!-- HERO untuk halaman tentang (gelap seperti beranda) -->
-  <section class="hero">
-    <div class="container">
-      <h1>Tentang Teras Makna</h1>
-      <p>Teras Makna adalah ruang kecil tempatku menulis tentang waktu, rindu, dan hikmah yang kutemui di jalan. Tulisan ini lahir dari catatan harian dan renungan—bukan klaim kebenaran mutlak, melainkan usaha memahami diri.</p>
-    </div>
-  </section>
+            <h2 class="article-title">Kontak & Sosial</h2>
+            <p class="contact">
+              Email: <a href="mailto:anamingrzx@gmail.com">anamingrzx@gmail.com</a><br>
+              Instagram: <a href="https://instagram.com/budmnn_">@budmnn_</a>
+            </p>
 
-  <!-- Konten utama halaman tentang (background putih, teks kontras) -->
-  <main class="about">
-    <div class="container">
-        <h2 class="article-title ">Tentang Penulis</h2>
-        <p>Arif Budiman, anak kelahiran Lubuk Alung, Minangkabau. Saat ini menempuh studi di Fakultas Syariah & Hukum UIN Sunan Kalijaga.</p>
+            <a class="read-more" href="index.html">← Kembali ke Beranda</a>
+        </div>
+    </main>
 
-        <h2 class="article-title">Kontak & Sosial</h2>
-        <p class="contact">
-          Email: <a href="mailto:anamingrzx@gmail.com" target="_blank" rel="noopener">anamingrzx@gmail.com</a><br>
-          Instagram: <a href="https://instagram.com/budmnn_" target="_blank" rel="noopener">@budmnn_</a>
-        </p>
-
-        <a class="read-more" href="index.html">← Kembali ke Beranda</a>
-    </div>
-  </main>
-
- <footer>
-  <p>© 2025 Teras Makna | Budiman</p>
-  <div class="socials">
-  </div>
-</footer>
+    <footer>
+        <p>© 2025 Teras Makna | Budiman</p>
+    </footer>
 </body>
 </html>
